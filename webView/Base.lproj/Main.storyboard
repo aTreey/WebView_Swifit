@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="webView" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jjE-hv-zzA">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="550"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GHc-v7-IRw">
+                                <rect key="frame" x="0.0" y="550" width="600" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e0w-9J-8fl">
+                                        <rect key="frame" x="8" y="10" width="50" height="30"/>
+                                        <color key="backgroundColor" red="0.68235294120000001" green="0.83529411760000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="后退"/>
+                                        <connections>
+                                            <action selector="fallBack:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Adj-md-rTK"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-bC-0Ko">
+                                        <rect key="frame" x="66" y="10" width="50" height="30"/>
+                                        <color key="backgroundColor" red="0.68235294120000001" green="0.83529411760000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="刷新"/>
+                                        <connections>
+                                            <action selector="refresh:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nJY-oy-iau"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEr-8Q-izB">
+                                        <rect key="frame" x="124" y="10" width="50" height="30"/>
+                                        <color key="backgroundColor" red="0.68235294120000001" green="0.83529411760000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="前进"/>
+                                        <connections>
+                                            <action selector="goForward:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yca-Q3-fqU"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UUN-do-h9j">
+                                        <rect key="frame" x="182" y="10" width="60" height="30"/>
+                                        <color key="backgroundColor" red="0.68235294120000001" green="0.83529411760000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="不断刷新"/>
+                                        <connections>
+                                            <action selector="refreshCantStop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Mn-ce-KNc"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y4A-mq-qDq">
+                                        <rect key="frame" x="250" y="10" width="50" height="30"/>
+                                        <color key="backgroundColor" red="0.68235294120000001" green="0.83529411760000005" blue="0.50588235290000005" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="停止"/>
+                                        <connections>
+                                            <action selector="stop:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0ZE-NJ-W2C"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="4WQ-tN-6mV"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="head.png" translatesAutoresizingMaskIntoConstraints="NO" id="aYP-K5-cDd">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="BbI-9d-q4v"/>
+                                    <constraint firstAttribute="width" constant="100" id="smH-ZU-bNi"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="jjE-hv-zzA" secondAttribute="trailing" constant="-20" id="04R-BD-uWx"/>
+                            <constraint firstItem="jjE-hv-zzA" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="7RS-wM-9XD"/>
+                            <constraint firstItem="GHc-v7-IRw" firstAttribute="top" secondItem="jjE-hv-zzA" secondAttribute="bottom" id="LFy-95-CSY"/>
+                            <constraint firstItem="GHc-v7-IRw" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="QpK-Ko-sAM"/>
+                            <constraint firstItem="jjE-hv-zzA" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="bLU-H8-o4d"/>
+                            <constraint firstItem="aYP-K5-cDd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cZw-HZ-hB2"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="GHc-v7-IRw" secondAttribute="bottom" id="iVR-4r-mDU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GHc-v7-IRw" secondAttribute="trailing" constant="-20" id="rIk-AA-FMx"/>
+                            <constraint firstItem="aYP-K5-cDd" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="wa8-Jc-O6N"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="refreshImage" destination="aYP-K5-cDd" id="ghI-E4-GPd"/>
+                        <outlet property="webView" destination="jjE-hv-zzA" id="cTl-2r-h5S"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="216" y="337"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="head.png" width="200" height="200"/>
+    </resources>
+</document>
